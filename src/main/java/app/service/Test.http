@@ -1,0 +1,41 @@
+POST http://localhost:8080/pet
+Content-Type: application/json
+
+{
+  "category": {
+    "name": "string"
+  },
+  "name": "doggie",
+  "tags": [
+    {"name": "string"},
+    {"name": "string1"}
+  ],
+  "petStatus": "SOLD"
+}
+
+###
+
+POST http://localhost:8080/store/order
+Content-Type: application/json
+
+{
+  "petId": 2,
+  "quantity": 5,
+  "shipDate": "2021-03-01T17:00:31.618Z",
+  "userId": 10,
+  "orderStatus": "PLACED",
+  "complete": true
+}
+
+###
+
+GET http://localhost:8080/store/order/1
+
+###
+
+DELETE http://localhost:8080/store/order/1
+###
+
+GET http://localhost:8080/store/inventory
+
+
